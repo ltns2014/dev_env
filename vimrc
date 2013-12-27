@@ -1,5 +1,16 @@
 set nocompatible
-syntax on
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree'
+Bundle 'bling/vim-airline'
+Bundle 'majutsushi/tagbar'
+Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'Valloric/YouCompleteMe'
+
 filetype plugin indent on
 
 " tabstop settings
@@ -71,10 +82,6 @@ func! DeleteTrailingWS()
     exe "normal `z"
 endfunc
 autocmd BufWrite * :call DeleteTrailingWS()
-
-" ============================================================
-" pathogen
-execute pathogen#infect()
 
 " ============================================================
 " colorscheme
