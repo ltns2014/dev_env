@@ -1,16 +1,6 @@
 set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'bling/vim-airline'
-Bundle 'majutsushi/tagbar'
-Bundle 'chriskempson/vim-tomorrow-theme'
-Bundle 'Valloric/YouCompleteMe'
-
+syntax on
+filetype on
 filetype plugin indent on
 
 " tabstop settings
@@ -61,7 +51,7 @@ set nobackup
 set nowb
 set noswapfile
 
-" move between windows
+" Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
@@ -75,13 +65,14 @@ autocmd BufReadPost *
 " Remember info about open buffers on close
 set viminfo^=%
 
-" Delete trailing white space on save
+" Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
     exe "normal mz"
     %s/\s\+$//ge
     exe "normal `z"
 endfunc
-autocmd BufWrite * :call DeleteTrailingWS()
+autocmd BufWrite *.py :call DeleteTrailingWS()
+autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
 " ============================================================
 " colorscheme
@@ -109,3 +100,10 @@ map <F4> <ESC>:TagbarToggle<CR>
 " you-complete-me
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
+
+" ============================================================
+" ultisnips
+let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsExpandTrigger = "<c-m>"
+"let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
