@@ -16,6 +16,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'scrooloose/syntastic'
 Bundle 'groenewege/vim-less'
 Bundle 'gorodinskiy/vim-coloresque'
+Bundle 'gregsexton/MatchTag'
 
 syntax on
 filetype plugin indent on
@@ -125,5 +126,5 @@ let g:ycm_confirm_extra_conf = 0
 " ultisnips
 "let g:UltiSnipsUsePythonVersion = 2
 "let g:UltiSnipsExpandTrigger = '<C-m>'
-"let g:UltiSnipsJumpForwardTrigger = '<tab>'
-"let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
