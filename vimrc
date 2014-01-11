@@ -10,6 +10,12 @@ Bundle 'bling/vim-airline'
 Bundle 'majutsushi/tagbar'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'chriskempson/base16-vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'SirVer/ultisnips'
+Bundle 'scrooloose/syntastic'
+Bundle 'groenewege/vim-less'
+Bundle 'gorodinskiy/vim-coloresque'
 
 syntax on
 filetype plugin indent on
@@ -93,11 +99,14 @@ set number
 set cursorline
 set foldcolumn=1
 set cmdheight=2
-colorscheme Tomorrow-Night-Eighties
+let base16colorspace=256
+"colorscheme Tomorrow-Night-Bright
+colorscheme base16-default
 
 " ============================================================
 " airline
 set laststatus=2
+let g:airline_theme='tomorrow'
 
 " ============================================================
 " nerdtree
@@ -114,7 +123,7 @@ let g:ycm_confirm_extra_conf = 0
 
 " ============================================================
 " ultisnips
-let g:UltiSnipsUsePythonVersion = 2
-let g:UltiSnipsExpandTrigger = "<c-m>"
-"let g:UltiSnipsJumpForwardTrigger = "<tab>"
-"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+"let g:UltiSnipsUsePythonVersion = 2
+"let g:UltiSnipsExpandTrigger = '<C-m>'
+"let g:UltiSnipsJumpForwardTrigger = '<tab>'
+"let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
