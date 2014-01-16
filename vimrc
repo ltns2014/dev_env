@@ -104,14 +104,14 @@ set number
 set cursorline
 set foldcolumn=1
 "set cmdheight=2
-"colorscheme Tomorrow-Night
+"colorscheme solarized
 let base16colorspace=256
 colorscheme base16-default
 
 " ============================================================
 " airline
 set laststatus=2
-let g:airline_theme='airlineish'
+let g:airline_theme='light'
 
 " ============================================================
 " nerdtree
